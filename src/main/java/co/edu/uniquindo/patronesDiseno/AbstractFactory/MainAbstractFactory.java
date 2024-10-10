@@ -13,19 +13,13 @@ public class MainAbstractFactory {
         // patrón creacional  Abstract Factory que  permite crear objetos relacionados sin especificar
         // sus clases concretas.
 
-
-
-
-        // Crear una fábrica concreta para Samsung
         IAbstractFactory samsungFactory = new SamsungFactory();
 
-        // Crear productos utilizando la fábrica
         Televisor tvSamsung = samsungFactory.crearTelevisor("65 pulgadas", "4K");
         Celular celularSamsung = samsungFactory.crearCelular("Exynos 2200", 4);
         Lavadora lavadoraSamsung = samsungFactory.crearLavadora(18, "Blanco");
         EquipoSonido equipoSonidoSamsung = samsungFactory.crearEquipoSonido("Negro", "Grande");
 
-        // Mostrar detalles de los productos creados
         System.out.println("Detalles de los productos Samsung:");
         tvSamsung.mostrarInformacion();
         celularSamsung.mostrarInformacion();
